@@ -14,6 +14,9 @@
     --cor3: #8E80BF;
     --cor4: #AEA3D9;
     --cor5: #252140;
+    --cor6: #7867b9;
+    --cor7: #a991ff;
+    --cor8: #704f99;
 }
 
 * {
@@ -38,17 +41,17 @@ main {
 section#login {
     background-color: var(--cor4);
     width: 250px;
-    height: 500px;
+    height: 460px;
     border-radius: 10px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.304);
 
     transition: width .5s, height .5s;
     transition-timing-function: ease;
+    transform: translate(-50%, -50%);
 }
 
 section#login > div#imagem {
@@ -71,4 +74,75 @@ div#formulario {
 
 div#formulario > p {
     font-size: 0.8em;
+}
+
+form > div.campo {
+    background-color: var(--cor8);
+    border: 2px solid var(--cor8);
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    margin: 5px 0px;
+}
+
+form > div.campo > label {
+    display: none;
+}
+
+div.campo > span.material-symbols-outlined {
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input {
+    background-color: var(--cor4);
+    width: calc(100% - 45px);
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 5px;
+    transform: translateY(-15px);
+}
+
+div.campo > input:focus-within {
+    background-color: white;
+}
+
+form > input[type=submit] {
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: var(--cor2);
+    border-radius: 8px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form > input[type=submit]:hover {
+    background-color: var(--cor6);
+}
+
+form > a.botao {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    padding: 10px;
+    background-color: var(--cor7);
+    color: var(--cor1);
+    border: 1px solid var(--cor2);
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+form > a.botao:hover {
+    background-color: var(--cor6);
+    color: white;
 }
