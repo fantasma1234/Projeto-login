@@ -1,1 +1,74 @@
 @charset "UTF-8";
+
+/*
+    cores utilizadas:
+    #1C1426
+    #4B4073
+    #8E80BF
+    #AEA3D9
+    #252140
+*/
+:root {
+    --cor1: #1C1426;
+    --cor2: #4B4073;
+    --cor3: #8E80BF;
+    --cor4: #AEA3D9;
+    --cor5: #252140;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: var(--cor3);
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+section#login {
+    background-color: var(--cor4);
+    width: 250px;
+    height: 500px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.304);
+
+    transition: width .5s, height .5s;
+    transition-timing-function: ease;
+}
+
+section#login > div#imagem {
+    background: var(--cor3) url('../img/Astronaut.jpg') no-repeat;
+    background-size: cover;
+    height: 200px;
+    background-position: center center;
+    display: block;
+}
+
+section#login > div#formulario {
+    padding: 10px;
+    display: block;
+}
+
+div#formulario {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div#formulario > p {
+    font-size: 0.8em;
+}
